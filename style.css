@@ -1,0 +1,168 @@
+:root{
+--main-color: yellow;
+--orange:rgb(212, 144, 7);
+--eyes: rgb(21, 16, 16);
+--bg:black;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.bird{
+    position: relative;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+.bird-face{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: -70px;
+    left: 25px;
+}
+
+.bird-body{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+.eyes{
+display: flex;
+/* border: 2px solid red; */
+position: absolute;
+top: 45px;
+width: 50%;
+left: 35px;
+justify-content: space-between;
+}
+
+.eye{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--eyes);
+}
+
+.beak{
+    width: 30px;
+    height: 30px;
+    border-radius: 30% 0 30% 0;
+    background-color: var(--orange);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 80px;
+    left: 60px;
+}
+
+.legs,.palms{
+display: flex;
+justify-content: space-evenly;
+position: relative;
+/* border: 2px solid red; */
+height: 40px;
+top: -20px;
+z-index: -1;
+}
+
+.leg{
+    width: 10px;
+    height: 40px;
+    background-color: var(--orange);
+   
+}
+
+.palms{
+    left: -0.3px;
+}
+
+.palm{
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--orange);
+}
+
+.bird-top{
+    display: flex;
+}
+
+.f{
+width: 20px;
+height: 20px;
+border-radius: 150px 0px 150px 0px;
+background-color: var(--main-color);
+position: relative;
+top: -80px;
+transform: rotate(90deg);
+left: 50px;
+}
+.f1{
+    left: 60px;
+    top: -78px;
+    
+}
+.bird-hand{
+    /* border: 2px solid red; */
+    position:absolute;
+    width: 130%;
+    display: flex;
+    left: -30px;
+    top: 50px;
+    justify-content: space-between;
+    z-index: -2;
+
+}
+.hand{
+    width: 50px;
+    height: 70px;
+    border-radius: 30% 30% 30% 120%;
+    background-color: var(--main-color);
+    /* background-color: black; */
+    z-index: 2;
+    
+
+}
+
+.hand-1{
+    transform: rotate(90deg);
+animation: wave 1s 1s ease infinite;
+transform-origin: top left; 
+  transform: rotate(130deg) scaleX(-1);
+  position: relative;
+  top: 60px;
+  left: 40px;
+}
+
+.hand-2{
+    transform: rotate(-90deg);
+}
+
+@keyframes wave {
+    10% {
+      transform: rotate(110deg) scaleX(-1);
+    }
+    20% {
+      transform: rotate(130deg) scaleX(-1);
+    }
+    30% {
+      transform: rotate(110deg) scaleX(-1);
+    }
+    40% {
+      transform: rotate(130deg) scaleX(-1);
+    }
+  }
